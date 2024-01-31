@@ -12,7 +12,10 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // Configuração da porta serial
-const serialport = new SerialPort({ path: "COM3", baudRate: 9600 });
+const serialport = new SerialPort({
+  path: "/dev/cu.usbmodem141101",
+  baudRate: 9600,
+});
 
 // Quando uma conexão com o Construct é estabelecida
 wss.on("connection", (ws) => {
