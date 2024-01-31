@@ -33,7 +33,6 @@ wss.on("connection", (ws) => {
     console.log("Construct desconectado");
   });
 });
-
 // Inicializa o servidor
 const port = 3000;
 server.listen(port, () => {
